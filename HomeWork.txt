@@ -1,0 +1,7 @@
+https://gbcdn.mrgcdn.ru/uploads/asset/4513851/attachment/9588b96fec66cd66b4c4efb73c1fe909.html
+
+Задачи по C#
+
+git remote add origin https://github.com/RatushniyS/HomeWork.git
+git branch -M main
+git push -u origin main
