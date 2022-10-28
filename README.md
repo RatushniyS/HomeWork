@@ -5,29 +5,29 @@
 
 Вывести квадрат числа
 
-[Блок-схема](work000/000.drawio.png) [Код](work0/Program.cs)
+[Блок-схема](work000/000.drawio.png) [Код](work000/Program.cs)
 
 ## Задача 1
 По двум заанным числам проверять является ли первое квадратом второго
-[Блок-схема](work001/001.drawio.png) [Код](work1/Program.cs)
+[Блок-схема](work001/001.drawio.png) [Код](work001/Program.cs)
 
 ## Задача 2
 
 Даны 2 числа. Показать большее и меньшее число
 
-[Блок-схема](work002/002.drawio.png) [Код](work2/Program.cs)
+[Блок-схема](work002/002.drawio.png) [Код](work002/Program.cs)
 
 ## Задача 3
 
 По заданному номеру дня недели вывести его название
 
-[Блок-схема](work003/003.drawio.png) [Код](work3/Program.cs)
+[Блок-схема](work003/003.drawio.png) [Код](work003/Program.cs)
 
 ## Задача 4
 
 Найти максимальное из трех чисел
 
-[Блок-схема](work004/004.drawio.png) [Код](work4/Program.cs)
+[Блок-схема](work004/004.drawio.png) [Код](work004/Program.cs)
 
 ## Задача 5
 
