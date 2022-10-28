@@ -1,5 +1,5 @@
 ﻿// 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
-int number = new Random().Next(10, 99);                                                             // присваеваем к number случайное целое число от 10 до 99
+int number = new Random().Next(10, 100);                                                             // присваеваем к number случайное целое число от 10 до 99
 System.Console.WriteLine($"Число {number}");                                                        // вывод
 System.Console.WriteLine();                                                                         // пустая строка
 
