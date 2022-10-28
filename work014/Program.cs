@@ -2,24 +2,24 @@
 
 // 14. Найти третью цифру числа или сообщить, что её нет
 int number;
-System.Console.WriteLine("Введите число");                                                 
+System.Console.WriteLine("Введите число");                                                      // Ввод                               
 number = Convert.ToInt32(Console.ReadLine());                                           
-System.Console.WriteLine();
+System.Console.WriteLine();                                                                     // Пустая строка
 
 
-int digitCount = (int)Math.Log10(number) + 1;
+int digitCount = (int)Math.Log10(number) + 1;                                                   // Математическая функция определения длины числа(без неё не получается)
 
-if (number <= 2)
+if (digitCount <= 2)                                                                            // условие
 {
     System.Console.WriteLine("Третьей цифры нет");
 }
 else
 {
-    if (digitCount > 3)
+    if (digitCount > 3)                                                                          // условие
     {
-        number = number / Convert.ToInt32(Math.Pow(10, digitCount - 3));
+        number = number / Convert.ToInt32(Math.Pow(10, digitCount - 3));                         // Математическая функция степени
     }
-    number = number % 10;
+    number = number % 10;                                                                        // Находим последнюю цифру числа
     System.Console.WriteLine($"Третья цифра введенного числа: {number}");
 
 }
