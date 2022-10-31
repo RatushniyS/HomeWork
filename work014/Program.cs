@@ -1,13 +1,13 @@
 ﻿
 
 // 14. Найти третью цифру числа или сообщить, что её нет
-int number;
+long number;
 System.Console.WriteLine("Введите число");                                                      // Ввод                               
 number = Convert.ToInt32(Console.ReadLine());                                           
 System.Console.WriteLine();                                                                     // Пустая строка
 
 
-int digitCount = (int)Math.Log10(number) + 1;                                                   // Математическая функция определения длины числа(без неё не получается)
+long digitCount = (long)Math.Log10(number) + 1;                                                   // Математическая функция определения длины числа(без неё не получается)
 
 if (digitCount <= 2)                                                                            // условие
 {
@@ -23,4 +23,3 @@ else
     System.Console.WriteLine($"Третья цифра введенного числа: {number}");
 
 }
-
