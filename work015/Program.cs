@@ -4,7 +4,7 @@ int number1 = new Random().Next(1, 10000);                                      
 
 System.Console.WriteLine($"Заданное число {number1}");                                           // Показывает какие значения сгенерировались
 
-System.Console.WriteLine();                                                                      // Пустая строка
+System.Console.WriteLine("Проверяем деление на 7 и 23");                                         // Пустая строка
 
 if (number1 % 7 == 0 | number1 % 23 == 0)                                                        // Если number1 делится без остатка на number2
 {
