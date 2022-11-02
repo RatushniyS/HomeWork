@@ -1,57 +1,25 @@
-﻿// // Найти расстояние между точками в пространстве 2D/3D
-
-// // Код полностью скопирован, вернусь к нему позже, не соображаю что к чему
+﻿// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве
 
 
+Console.Clear();
+System.Console.WriteLine();
 
+System.Console.WriteLine("Введите координату X первой точки: ");                                       
+int x1 = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Введите координату Y первой точки: ");                                       
+int y1 = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Введите координату Z первой точки: ");                                       
+int z1 = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Введите координату X второй точки: ");                                       
+int x2 = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Введите координату Y второй точки: ");                                       
+int y2 = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Введите координату Z второй точки: ");                                       
+int z2 = Convert.ToInt32(Console.ReadLine());
 
+int A = x2 - x1;
+int B = y2 - y1;
+int C = z1 - z2;
 
-
-//  Console.Clear();
-// System.Console.WriteLine();
-
-// int numPlan = 3;            // количество осей координат
-// int min = -5;               // минимальное значение диапазона для выбора случайных чисел
-// int max = 6;                // максимальное значение диапазона ...
-
-// int[] PointCoords(int numPlan)                  
-// {
-//     int[] coords = new int[numPlan];
-//     for (int i = 0; i < numPlan; i++)
-//     {
-//         coords[i] = new Random().Next(min, max);
-//     }
-//     return coords;
-// }
-
-// void PrintCoords(int[] array)
-// {
-//     System.Console.Write($"({array[0]}, ");
-//     for (int i = 1; i < array.Length - 1; i++)
-//     {
-//         System.Console.Write($"{array[i]}, ");
-//     }
-//     System.Console.WriteLine($"{array[array.Length - 1]})");
-// }
-
-// double Distance(int[] arr1, int[] arr2)
-// {
-//     int sum = 0;
-//     for (int i = 0; i < arr1.Length; i++)
-//     {
-//         sum = sum + (arr1[i] - arr2[i]) * (arr1[i] - arr2[i]);
-//     }
-//     double result = Math.Sqrt(sum);
-//     return result;
-// }
-
-// int[] PointA = PointCoords(numPlan);
-// int[] PointB = PointCoords(numPlan);
-
-// System.Console.Write($"Координаты точки А: ");
-// PrintCoords(PointA);
-// System.Console.Write($"Координаты точки B: ");
-// PrintCoords(PointB);
-
-// System.Console.WriteLine($"Расстояние между точками А и В: {Distance(PointA, PointB)}");
-// System.Console.WriteLine(); 
+double length = Math.Sqrt(A * A + B * B + C * C);                       // Тиорема пифагора 
+Console.WriteLine($"Длинна отрезка {length}");

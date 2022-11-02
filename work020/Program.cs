@@ -1,6 +1,6 @@
 ﻿// Задать номер четверти, показать диапазоны для возможных координат
 
-System.Console.Clear();
+Console.Clear();
 System.Console.WriteLine();
 
 int quarterNumber = new Random().Next(1, 5);
