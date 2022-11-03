@@ -5,17 +5,18 @@
 
 
 
-    static double f(double x)
-    {
-        return 4 * Math.Pow(x, 3) - 3 * Math.Pow(x, 2);
-    }
-        Console.WriteLine("Введите X:");
-        int t = Convert.ToInt32(Console.ReadLine());
+static double f(double x)
+{
+    return 4 * Math.Pow(x, 3) - 3 * Math.Pow(x, 2);
+}
+Console.WriteLine("Введите X:");
+int t = Convert.ToInt32(Console.ReadLine());
 
-        int x = Convert.ToInt32(t);
-        int i;
-        double sum = 0;
+int x = Convert.ToInt32(t);
+int i;
+double sum = 0;
 
-        for (i = 1; i <= x; i++) sum = sum + f(i);
+for (i = 1; i <= x; i++)
+    sum = sum + f(i);
 
-        Console.WriteLine("Результат: {0}", sum);
+Console.WriteLine("Результат: {0}", sum);

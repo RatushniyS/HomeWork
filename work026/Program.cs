@@ -1,5 +1,8 @@
 ﻿// Возведите число А в натуральную степень B используя цикл
 
+Console.Clear();
+System.Console.WriteLine();
+
 System.Console.WriteLine("Введите Число которое нужно возвести в степень");
 int numberA = Convert.ToInt32(Console.ReadLine());
 System.Console.WriteLine("Введите Степень");
