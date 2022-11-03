@@ -12,8 +12,8 @@ int result = 0;
  
     for (int i = 0; i < numberB - 1; i++)
     {
-        if (result == 0)
-            result = numberA * numberA;
+        if (result == 0)                                                               
+            result = numberA * numberA;                                                      // для корректного перемножения первых степеней
         else
             result = result * numberA;
     }

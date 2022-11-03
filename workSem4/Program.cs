@@ -112,14 +112,14 @@ int n = 123;
 
 int[] array = CreateRandomArray(n);
 
-int count = 0;
-for (int i = 0; i < n; i++)
-{
-    if (10 > array[i] || array[i] > 100)
-        count++;
-}
-System.Console.WriteLine();
-System.Console.WriteLine($" Чисел совпавших с диапозоном: {count}");
+// int count = 0;
+// for (int i = 0; i < n; i++)
+// {
+//     if (10 > array[i] || array[i] > 100)
+//         count++;
+// }
+// System.Console.WriteLine();
+// System.Console.WriteLine($" Чисел совпавших с диапозоном: {count}");
 
 
 // // Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.

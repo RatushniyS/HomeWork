@@ -9,7 +9,7 @@ int sum = 0;
 
 System.Console.Write($"Сумма всех чисел числа {number} = ");
 
-for (int i = 0; i <= number; i++)
+for (int i = 0; i <= number; i++)                                           // Решение через цикл, Методы в след задачах. Позже и метод добавлю
 {
     int digit = number % 10;
     if (digit == 1)
@@ -18,6 +18,5 @@ for (int i = 0; i <= number; i++)
     sum = sum + digit;
     number = number / 10;
 }
-
 
 System.Console.WriteLine(sum);
