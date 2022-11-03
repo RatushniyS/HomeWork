@@ -9,14 +9,14 @@ System.Console.WriteLine("Введите Степень");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
 int result = 0;
-
-for (int i = 0; i < numberB - 1; i++)
-{
-    if (result == 0)
-        result = numberA * numberA;
-    else
-        result = result * numberA;
-}
+ 
+    for (int i = 0; i < numberB - 1; i++)
+    {
+        if (result == 0)
+            result = numberA * numberA;
+        else
+            result = result * numberA;
+    }
 
 System.Console.WriteLine($"Число {numberA} в степени {numberB} = {result}");
 
