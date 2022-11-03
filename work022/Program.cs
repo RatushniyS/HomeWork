@@ -19,7 +19,7 @@ int z2 = Convert.ToInt32(Console.ReadLine());
 
 int A = x2 - x1;
 int B = y2 - y1;
-int C = z1 - z2;
+int C = z2 - z1;
 
 double length = Math.Sqrt(A * A + B * B + C * C);                       // Тиорема пифагора 
 Console.WriteLine($"Длинна отрезка {length}");
