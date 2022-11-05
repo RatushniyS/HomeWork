@@ -8,14 +8,11 @@ int numberA = Convert.ToInt32(Console.ReadLine());
 System.Console.WriteLine("Введите Степень");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
-int result = 0;
+int result = 1;
  
-    for (int i = 0; i < numberB - 1; i++)
+    for (int i = 0; i < numberB; i++)
     {
-        if (result == 0)                                                               
-            result = numberA * numberA;                                                      // для корректного перемножения первых степеней
-        else
-            result = result * numberA;
+                    result = result * numberA;
     }
 
 System.Console.WriteLine($"Число {numberA} в степени {numberB} = {result}");
