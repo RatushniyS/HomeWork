@@ -3,7 +3,7 @@
 Console.Clear();
 System.Console.WriteLine();
 
-System.Console.WriteLine("Введите длину массива");
+System.Console.WriteLine($"Введите длину массива");
 int n = Convert.ToInt32(Console.ReadLine());
 System.Console.WriteLine();
 
