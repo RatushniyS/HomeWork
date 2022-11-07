@@ -3,13 +3,13 @@
 Console.Clear();
 System.Console.WriteLine();
 
-double input(string variable) 
-{ 
-       Console.WriteLine($"введите число {variable}"); 
-       double res = Convert.ToInt64(Console.ReadLine()); 
-       return res; 
-} 
- 
+double input(string variable)
+{
+    Console.WriteLine($"введите число {variable}");
+    double res = Convert.ToInt64(Console.ReadLine());
+    return res;
+}
+
 double b1 = input("b1");
 double k1 = input("k1");
 double b2 = input("b2");

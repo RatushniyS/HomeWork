@@ -6,22 +6,21 @@ System.Console.WriteLine();
 int[] Input()
 {
     Console.Write("Введите числа через пробел: ");
-    return Console.ReadLine().Split(" ").Select(int.Parse).ToArray();           //Спасибо, Евгений))) 
+    return Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
 }
+
 int checkOverZero(int[] array)
 {
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        
-        if (array[i] > 0)
-            count++;
+
+        if (array[i] > 0) count++;
     }
 
     return count;
 
 }
-
 
 int[] array = Input();
 int count = checkOverZero(array);
