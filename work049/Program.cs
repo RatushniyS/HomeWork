@@ -13,7 +13,7 @@ void FillArray(double[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = Convert.ToDouble(new Random().Next(-30, 30));    // Можно поделить на 10, чтоб наглядно показать что числа вещественные
+            array[i, j] = new Random().NextDouble ();
         }
     }
 }
@@ -24,7 +24,7 @@ void PrintArray(double[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(array[i, j] + " ");
+            Console.Write(array[i, j] + "\t");
         }
         System.Console.WriteLine();
     }
