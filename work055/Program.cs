@@ -8,7 +8,7 @@ int InputArray(string variable)
     return res;
 }
 
-void FillArray(int [,] array)
+void FillArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -20,6 +20,7 @@ void FillArray(int [,] array)
 }
 
 void PrintArray(int[,] array)
+
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -32,33 +33,28 @@ void PrintArray(int[,] array)
 
 }
 
-
-double[] avgNumbers = new double[numbers.GetLength(1)];
-
-for (int i = 0; i < numbers.GetLength(1); i++)
+void AvgMatrix(double[] array)
 {
     double result = 0.0;
-    for (int j = 0; j < numbers.GetLength(0); j++)
+    double[] array1 = new double[array.GetLength(1)];
+    for (int i = 0; i < array.GetLength(1); i++)
     {
-        result += numbers[j, i];
+        for (int j = 0; j < array.GetLength(0); j++)
+        {
+            result = result + array[j, i];
+        }
+        array1[i] = result / array.GetLength(0);
     }
-    avgNumbers[i] = result / numbers.GetLength(0);
 }
-PrintArray(avgNumbers);
 
-void PrintArray(double[] array)
+void PrintArrayList(double[] array1)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array1.Length; i++)
     {
-        Console.Write(array[i] + " ");
+        Console.Write(array1[i] + " ");
     }
     Console.WriteLine();
 }
-
-
-
-
-
 
 int i = InputArray("количество строк");
 int j = InputArray("количество столбцов");
@@ -66,3 +62,8 @@ System.Console.WriteLine();
 int[,] matrix = new int[i, j];
 FillArray(matrix);
 PrintArray(matrix);
+
+AvgMatrix();
+
+PrintArrayList(avgMatrix);
+
