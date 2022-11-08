@@ -14,7 +14,7 @@ void FillArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = new Random().Next(0, 20);
+            array[i, j] = new Random().Next(1, 20);
         }
     }
 }
@@ -42,7 +42,7 @@ double[] AvgMatrix(int[,] array)
         result = 0;
         for (int j = 0; j < array.GetLength(0); j++)
         {
-            result = result + array[i, j];
+            result = result + array[j, i];
         }
         array1[i] = result / array.GetLength(1);
     }
@@ -53,10 +53,11 @@ void PrintArrayList(double[] array1)
 {
     for (int i = 0; i < array1.Length; i++)
     {
-        Console.Write(array1[i] + "\t");
+        Console.Write(array1[i].ToString("F" + 3) + "\t");
     }
 
 }
+
 
 int i = InputArray("количество строк");
 int j = InputArray("количество столбцов");
@@ -67,6 +68,6 @@ PrintArray(matrix);
 
 
 
-double [] array1 = AvgMatrix(matrix);
+double[] array1 = AvgMatrix(matrix);
 PrintArrayList(array1);
 
