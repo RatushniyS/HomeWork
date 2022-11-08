@@ -35,16 +35,16 @@ void PrintArray(int[,] array)
 
 double[] AvgMatrix(int[,] array)
 {
-    double result = 0.0;
+    
     double[] array1 = new double[array.GetLength(1)];
     for (int i = 0; i < array.GetLength(1); i++)
     {
-        result = 0;
+        double result = 0;
         for (int j = 0; j < array.GetLength(0); j++)
         {
             result = result + array[j, i];
         }
-        array1[i] = result / array.GetLength(1);
+        array1[i] = result / array.GetLength(0);
     }
     return array1;
 }
@@ -65,8 +65,7 @@ System.Console.WriteLine();
 int[,] matrix = new int[i, j];
 FillArray(matrix);
 PrintArray(matrix);
-
-
+System.Console.WriteLine();
 
 double[] array1 = AvgMatrix(matrix);
 PrintArrayList(array1);
