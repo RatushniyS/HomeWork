@@ -50,7 +50,7 @@ void NumberSearch(double[,] array)
             if (array[i, j] == n)
             {
                 x = true;
-                System.Console.WriteLine($"Число {n} находится на позиции {i},{j} ");
+                System.Console.WriteLine($"Число {n} находится на позиции [{i}],[{j}] ");
             }
         }
     }
