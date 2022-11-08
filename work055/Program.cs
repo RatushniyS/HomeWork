@@ -33,27 +33,29 @@ void PrintArray(int[,] array)
 
 }
 
-void AvgMatrix(double[] array)
+double[] AvgMatrix(int[,] array)
 {
     double result = 0.0;
     double[] array1 = new double[array.GetLength(1)];
     for (int i = 0; i < array.GetLength(1); i++)
     {
+        result = 0;
         for (int j = 0; j < array.GetLength(0); j++)
         {
-            result = result + array[j, i];
+            result = result + array[i, j];
         }
-        array1[i] = result / array.GetLength(0);
+        array1[i] = result / array.GetLength(1);
     }
+    return array1;
 }
 
 void PrintArrayList(double[] array1)
 {
     for (int i = 0; i < array1.Length; i++)
     {
-        Console.Write(array1[i] + " ");
+        Console.Write(array1[i] + "\t");
     }
-    Console.WriteLine();
+
 }
 
 int i = InputArray("количество строк");
@@ -63,7 +65,8 @@ int[,] matrix = new int[i, j];
 FillArray(matrix);
 PrintArray(matrix);
 
-AvgMatrix();
 
-PrintArrayList(avgMatrix);
+
+double [] array1 = AvgMatrix(matrix);
+PrintArrayList(array1);
 
