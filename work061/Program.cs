@@ -57,23 +57,23 @@ int j = InputArray("количество столбцов первой матр�
 int m = InputArray("количество строк второй матрицы");      // matrix2
 int n = InputArray("количество столбцов второй матрицы");   // matrix2
 
-if (j != m) System.Console.WriteLine("Число столбцов первой должно соответствовать числу строк второй. Введите корректные данные");
-else
+while (j != m)                                              // Как сделать проверку правильно? Мне кажется что тут не верно
 {
-    System.Console.WriteLine();
-    int[,] matrix = new int[i, j];
-    int[,] matrix2 = new int[m, n];
-    FillArray(matrix);
-    PrintArray(matrix);
-    System.Console.WriteLine();
-    FillArray(matrix2);
-    PrintArray(matrix2);
-    System.Console.WriteLine();
-    System.Console.WriteLine("Результатом произведения первой и второй матрицы матрицы: ");
-    MatrixMultiplication(matrix, matrix2);
-    System.Console.WriteLine();
-    PrintArray(MatrixMultiplication(matrix, matrix2));
-    System.Console.WriteLine();
-
-
+    Console.WriteLine("Число столбцов первой должно соответствовать числу строк второй. Введите корректные данные");
+    break;
 }
+
+System.Console.WriteLine();
+int[,] matrix = new int[i, j];
+int[,] matrix2 = new int[m, n];
+FillArray(matrix);
+PrintArray(matrix);
+System.Console.WriteLine();
+FillArray(matrix2);
+PrintArray(matrix2);
+System.Console.WriteLine();
+System.Console.WriteLine("Результатом произведения первой и второй матрицы матрицы: ");
+MatrixMultiplication(matrix, matrix2);
+System.Console.WriteLine();
+PrintArray(MatrixMultiplication(matrix, matrix2));
+System.Console.WriteLine();
