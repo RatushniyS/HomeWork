@@ -19,7 +19,6 @@ void FillArray(int[,] array)
     }
 }
 
-
 void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -34,41 +33,48 @@ void PrintArray(int[,] array)
 }
 
 
-void MatrixMultiplication(int[,] matrix1, int[,] matrix2, int[,] matrix3)
+int[,] MatrixMultiplication(int[,] matrix, int[,] matrix2)
 {
-    for (int i = 0; i < matrix3.GetLength(0); i++)
+    int[,] matrix3 = new int[matrix.GetLength(0), matrix2.GetLength(1)];
+    if (matrix.GetLength(1) == matrix2.GetLength(0))
     {
-        for (int j = 0; j < matrix3.GetLength(1); j++)
+        for (int i = 0; i < matrix3.GetLength(0); i++)
         {
-            matrix3[i, j] = 0;
-            for (int n = 0; n < matrix1.GetLength(1); n++)
+            for (int j = 0; j < matrix3.GetLength(1); j++)
             {
-                matrix3[i, j] += matrix1[i, n] * matrix2[n, j];                         // Всё просто)
+                matrix3[i, j] = 0;
+                for (int n = 0; n < matrix.GetLength(1); n++)
+                {
+                    matrix3[i, j] += matrix[i, n] * matrix2[n, j];
+                }
             }
         }
     }
+    return matrix3;
 }
 
 
+int i = InputArray("количество строк первой матрицы");      // matrix
+int j = InputArray("количество столбцов первой матрицы");   // matrix
+int m = InputArray("количество строк второй матрицы");      // matrix2
+int n = InputArray("количество столбцов второй матрицы");   // matrix2
+if (j != m) System.Console.WriteLine("Число столбцов первой должно соответствовать числу строк второй. Введите корректные данные");
+else
+{
+    System.Console.WriteLine();
+    int[,] matrix = new int[i, j];
+    int[,] matrix2 = new int[m, n];
+    FillArray(matrix);
+    PrintArray(matrix);
+    System.Console.WriteLine();
+    FillArray(matrix2);
+    PrintArray(matrix2);
+    System.Console.WriteLine();
+    System.Console.WriteLine("Результатом произведения первой и второй матрицы матрицы: ");
+    MatrixMultiplication(matrix, matrix2);
+    System.Console.WriteLine();
+    PrintArray(MatrixMultiplication(matrix, matrix2));
+    System.Console.WriteLine();
 
 
-int i = InputArray("количество строк");
-int j = InputArray("количество столбцов");
-System.Console.WriteLine();
-int[,] matrix = new int[i, j];
-int[,] matrix2 = new int[i, j];
-int[,] matrix3 = new int[i, j];
-FillArray(matrix);
-PrintArray(matrix);
-System.Console.WriteLine();
-FillArray(matrix2);
-PrintArray(matrix2);
-
-MatrixMultiplication(matrix, matrix2, matrix3);
-System.Console.WriteLine("Результатом произведения первой и второй матрицы матрицы: ");
-System.Console.WriteLine();
-PrintArray(matrix3);
-System.Console.WriteLine();
-
-
-
+}
