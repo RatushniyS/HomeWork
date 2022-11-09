@@ -6,7 +6,6 @@
 # User-specific files
 /test
 *test/
-
 test/
 *.rsuser
 *.suo
