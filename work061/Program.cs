@@ -32,7 +32,6 @@ void PrintArray(int[,] array)
 
 }
 
-
 int[,] MatrixMultiplication(int[,] matrix, int[,] matrix2)
 {
     int[,] matrix3 = new int[matrix.GetLength(0), matrix2.GetLength(1)];
@@ -53,11 +52,11 @@ int[,] MatrixMultiplication(int[,] matrix, int[,] matrix2)
     return matrix3;
 }
 
-
 int i = InputArray("количество строк первой матрицы");      // matrix
 int j = InputArray("количество столбцов первой матрицы");   // matrix
 int m = InputArray("количество строк второй матрицы");      // matrix2
 int n = InputArray("количество столбцов второй матрицы");   // matrix2
+
 if (j != m) System.Console.WriteLine("Число столбцов первой должно соответствовать числу строк второй. Введите корректные данные");
 else
 {
