@@ -47,7 +47,7 @@ void PrintBoard(int[,] array)
     }
 }
 
-void Main(int[,] array)
+void NoName(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -60,4 +60,4 @@ void Main(int[,] array)
     PrintBoard(board);
 }
 
-Main(board);
+NoName(board);
