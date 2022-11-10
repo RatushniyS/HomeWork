@@ -5,9 +5,9 @@ int m = Convert.ToInt32(Console.ReadLine());
 
 System.Console.WriteLine();
 
-int[,] desk = new int[n, m];
+int[,] board = new int[n, m];
 
-// int horse = desk[0, 0];             // Конь на позиции 0 0
+// int horse = board[0, 0];             // Конь на позиции 0 0
 
 int[][] step =
     {
@@ -25,23 +25,23 @@ int[][] step =
 
 void SetHorse(int x, int y)
 {
-    desk[x, y] = 0;
+    board[x, y] = 0;
     for (int i = 0; i < 2; i++)
     {
-        desk[x + step[i][0], y + step[i][1]] = i + 1;
+        board[x + step[i][0], y + step[i][1]] = i + 1;
     }
 }
 
 
 
 
-void PrintDesk(int[,] array)
+void PrintBoard(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            System.Console.Write($"{desk[i, j]} \t");
+            System.Console.Write($"{board[i, j]} \t");
         }
         System.Console.WriteLine();
     }
@@ -53,11 +53,11 @@ void Main(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            desk[i, j] = 0;
+            board[i, j] = 0;
         }
     }
     SetHorse(0, 0);
-    PrintDesk(desk);
+    PrintBoard(board);
 }
 
-Main(desk);
+Main(board);
