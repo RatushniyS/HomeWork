@@ -2,9 +2,8 @@
 
 System.Console.WriteLine("Введите количество строк/столбцов");
 int n = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine(
-  
-);
+System.Console.WriteLine();
+
 int[,] Matrix = new int[n, n];
 
 int temp = 1;
@@ -13,31 +12,31 @@ int j = 0;
 
 while (temp <= Matrix.GetLength(0) * Matrix.GetLength(1))
 {
-  Matrix[i, j] = temp;
-  temp++;
-  if (i <= j + 1 && i + j < Matrix.GetLength(1) - 1)
-    j++;
-  else if (i < j && i + j >= Matrix.GetLength(0) - 1)
-    i++;
-  else if (i >= j && i + j > Matrix.GetLength(1) - 1)
-    j--;
-  else
-    i--;
+    Matrix[i, j] = temp;
+    temp++;
+    if (i <= j + 1 && i + j < Matrix.GetLength(1) - 1)
+        j++;
+    else if (i < j && i + j >= Matrix.GetLength(0) - 1)
+        i++;
+    else if (i >= j && i + j > Matrix.GetLength(1) - 1)
+        j--;
+    else
+        i--;
 }
 
 WriteArray(Matrix);
 
-void WriteArray (int[,] array)
+void WriteArray(int[,] array)
 {
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    for (int j = 0; j < array.GetLength(1); j++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-      if (array[i,j] / 10 <= 0)
-      Console.Write($" {array[i,j]} ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] / 10 <= 0)
+                Console.Write($" {array[i, j]} ");
 
-      else Console.Write($"{array[i,j]} ");
+            else Console.Write($"{array[i, j]} ");
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
-  }
 }
