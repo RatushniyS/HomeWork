@@ -21,7 +21,7 @@ int[][] step =
         // new int[] {-1, -2},
 
     };
-
+ 
 
 void SetHorse(int x, int y)
 {
