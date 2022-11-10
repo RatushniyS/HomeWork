@@ -1,6 +1,10 @@
 ﻿// Спирально заполнить двумерный массив
 
-int n = 8;
+System.Console.WriteLine("Введите количество строк/столбцов");
+int n = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine(
+  
+);
 int[,] Matrix = new int[n, n];
 
 int temp = 1;
