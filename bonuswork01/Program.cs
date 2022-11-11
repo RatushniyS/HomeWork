@@ -74,4 +74,4 @@ void NoName(int[,] array)
     PrintBoard(board);
 }
 
-NoName(board);
+NoName(board); 
