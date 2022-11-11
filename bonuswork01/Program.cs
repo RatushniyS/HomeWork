@@ -20,7 +20,6 @@ int[][] step =
 
 int moves;
 
-
 void PrintBoard(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -35,13 +34,13 @@ void PrintBoard(int[,] array)
 
 bool SetHorse(int x, int y)
 {
-    // Проверка параметров
+    // Проверка
     if ((x < 0) || (x >= n) || (y < 0) || (y >= n))
         return false;
 
     if (board[x, y] != 0)
         return false;
-    // следующий ход
+    // Следующий ход
     moves++;
     board[x, y] = moves;
 
@@ -49,21 +48,14 @@ bool SetHorse(int x, int y)
     if (moves == n * m)
         return true;
 
-    // PrintBoard(board);
-    // System.Threading.Thread.Sleep(1000);
-
-    for (int i = 0; i < 8; i++)
+     for (int i = 0; i < 8; i++)
     {
         if (SetHorse(x + step[i][0], y + step[i][1]))
             return true;
-
-
-        // возврат хода
-
     }
+    // возврат хода
     moves--;
     board[x, y] = 0;
-
 
     return false;
 }
