@@ -17,37 +17,9 @@ int[][] step =
         new int[] {-2, 1},
         new int[] {-2, -1},
     };
+
 int moves;
 
-bool SetHorse(int x, int y)
-{
-    // Проверка параметров
-    if ((x < 0) || (x >= n) || (y < 0) || (y >= n))
-        return false;
-
-    if (board[x, y] != 0)
-        return false;
-
-    // Остановка
-    if (moves == n * m - 1)
-        return true;
-    // следующий ход
-    moves++;
-    board[x, y] = moves;
-    for (int i = 0; i < 8; i++)
-    {
-        if (SetHorse(x + step[i][0], y + step[i][1]))
-            return true;
-
-        // возврат хода
-
-        moves--;
-        board[x, y] = 0;
-    }
-
-
-    return false;
-}
 
 void PrintBoard(int[,] array)
 {
@@ -59,6 +31,41 @@ void PrintBoard(int[,] array)
         }
         System.Console.WriteLine();
     }
+}
+
+bool SetHorse(int x, int y)
+{
+    // Проверка параметров
+    if ((x < 0) || (x >= n) || (y < 0) || (y >= n))
+        return false;
+
+    if (board[x, y] != 0)
+        return false;
+    // следующий ход
+    moves++;
+    board[x, y] = moves;
+
+    // Остановка
+    if (moves == n * m)
+        return true;
+
+    // PrintBoard(board);
+    // System.Threading.Thread.Sleep(1000);
+
+    for (int i = 0; i < 8; i++)
+    {
+        if (SetHorse(x + step[i][0], y + step[i][1]))
+            return true;
+
+
+        // возврат хода
+
+    }
+    moves--;
+    board[x, y] = 0;
+
+
+    return false;
 }
 
 void NoName(int[,] array)
