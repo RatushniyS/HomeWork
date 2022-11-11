@@ -1,4 +1,7 @@
-﻿System.Console.WriteLine("Введите количество строк");
+﻿// Есть поле 5х5, конь начинает с позиции 0,0 и должен обойти все поле заняв все клетки, но не ступая дважды на одну клетку.
+
+
+System.Console.WriteLine("Введите количество строк");
 int n = Convert.ToInt32(Console.ReadLine());
 System.Console.WriteLine("Введите количество столбцов");
 int m = Convert.ToInt32(Console.ReadLine());
@@ -48,7 +51,7 @@ bool SetHorse(int x, int y)
     if (moves == n * m)
         return true;
 
-     for (int i = 0; i < 8; i++)
+    for (int i = 0; i < 8; i++)
     {
         if (SetHorse(x + step[i][0], y + step[i][1]))
             return true;
@@ -74,4 +77,4 @@ void NoName(int[,] array)
     PrintBoard(board);
 }
 
-NoName(board); 
+NoName(board);
